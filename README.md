@@ -8,7 +8,7 @@ VpnCloud - Peer-to-Peer VPN
 ```sh
 $> vpncloud -c REMOTE_HOST:PORT -p 'mypassword' --ip 10.0.0.1/24
 ```
-
+-c 10.0.0.1:5050 -p 'mypassword' --ip 10.0.0.1/24
 or as config file:
 
 ```yaml
