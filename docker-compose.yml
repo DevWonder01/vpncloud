@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  vpncloud:
+    build: .
+    cap_add:
+      - NET_ADMIN   # Needed for TUN/TAP device
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    network_mode: "host"  # Or use a custom network if needed
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    restart: unless-stopped
